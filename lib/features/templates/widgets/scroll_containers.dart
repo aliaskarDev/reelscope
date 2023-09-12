@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_reelscope/constants/const.dart';
 import 'package:flutter_reelscope/features/templates/widgets/stotries_container.dart';
 
-class ScrollContainers extends StatefulWidget {
-  const ScrollContainers({super.key});
+class ListofSocialNetwork extends StatefulWidget {
+  const ListofSocialNetwork({super.key});
 
   @override
-  State<ScrollContainers> createState() => _ScrollContainersState();
+  State<ListofSocialNetwork> createState() => _ListofSocialNetworkState();
 }
 
-class _ScrollContainersState extends State<ScrollContainers> {
+class _ListofSocialNetworkState extends State<ListofSocialNetwork> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {

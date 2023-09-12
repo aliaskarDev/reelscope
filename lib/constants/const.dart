@@ -58,5 +58,3 @@ final List<String> reelsPhotos = [
   'assets/images/reels5.png',
   'assets/images/reels6.png',
 ];
-
-bool isActiveIcon = true;

@@ -60,13 +60,14 @@ class _TemplatesMainScreenState extends State<TemplatesMainScreen> {
           Column(
             children: [
               SizedBox(height: 18),
-              ScrollContainers(),
+              ListofSocialNetwork(),
               ReelsListView(activeIcon: true),
               ReelsListView(activeIcon: false),
               ReelsListView(activeIcon: true),
               SizedBox(height: 10),
               ChangeTrendContainer(),
-              ReelsListView(activeIcon: false)
+              ReelsListView(activeIcon: false),
+              SizedBox(height: 40),
             ],
           ),
         ],

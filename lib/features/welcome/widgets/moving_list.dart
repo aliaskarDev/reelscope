@@ -12,10 +12,10 @@ class MovingList extends StatefulWidget {
   });
 
   @override
-  _MovingListState createState() => _MovingListState();
+  MovingListState createState() => MovingListState();
 }
 
-class _MovingListState extends State<MovingList> {
+class MovingListState extends State<MovingList> {
   late ScrollController _controllerfirst;
   bool stop = true;
 

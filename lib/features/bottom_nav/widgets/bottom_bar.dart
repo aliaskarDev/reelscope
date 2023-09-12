@@ -6,7 +6,6 @@ import 'package:flutter_reelscope/ui/colors/colors.dart';
 import 'package:flutter_reelscope/ui/textstyle/textstyle.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// ignore: must_be_immutable
 class BottomBar extends StatefulWidget {
   final Widget child;
   final int currentPage;
@@ -27,10 +26,10 @@ class BottomBar extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BottomBarState createState() => _BottomBarState();
+  BottomBarState createState() => BottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar>
+class BottomBarState extends State<BottomBar>
     with SingleTickerProviderStateMixin {
   ScrollController scrollBottomBarController = ScrollController();
   late AnimationController _controller;
@@ -46,6 +45,7 @@ class _BottomBarState extends State<BottomBar>
       duration: const Duration(milliseconds: 300),
       vsync: this,
     );
+
     _offsetAnimation = Tween<Offset>(
       begin: Offset(0, widget.end),
       end: Offset.zero,
@@ -198,11 +198,11 @@ class _BottomBarState extends State<BottomBar>
                           child: Center(
                             child: Column(
                               children: [
-                                isActiveIcon
+                                widget.currentPage == 0
                                     ? SvgPicture.asset(
-                                        'assets/icons/template_icon.svg')
+                                        'assets/icons/active_template_icon.svg')
                                     : SvgPicture.asset(
-                                        'assets/icons/active_template_icon.svg'),
+                                        'assets/icons/template_icon.svg'),
                                 const SizedBox(height: 5),
                                 const Text(
                                   template,
@@ -218,11 +218,11 @@ class _BottomBarState extends State<BottomBar>
                           child: Center(
                             child: Column(
                               children: [
-                                isActiveIcon
+                                widget.currentPage == 1
                                     ? SvgPicture.asset(
-                                        'assets/icons/favorite_icon.svg')
+                                        'assets/icons/active_fav_icon.svg')
                                     : SvgPicture.asset(
-                                        'assets/icons/active_fav_icon.svg'),
+                                        'assets/icons/favorite_icon.svg'),
                                 const SizedBox(height: 5),
                                 const Text(
                                   favorite,
@@ -238,11 +238,11 @@ class _BottomBarState extends State<BottomBar>
                           child: Center(
                             child: Column(
                               children: [
-                                isActiveIcon
+                                widget.currentPage == 2
                                     ? SvgPicture.asset(
-                                        'assets/icons/my_project_icon.svg')
+                                        'assets/icons/active_my_proj_icon.svg')
                                     : SvgPicture.asset(
-                                        'assets/icons/active_my_proj_icon.svg'),
+                                        'assets/icons/my_project_icon.svg'),
                                 const SizedBox(height: 5),
                                 const Text(
                                   myProject,
@@ -258,11 +258,11 @@ class _BottomBarState extends State<BottomBar>
                           child: Center(
                             child: Column(
                               children: [
-                                isActiveIcon
+                                widget.currentPage == 3
                                     ? SvgPicture.asset(
-                                        'assets/icons/setting_icon.svg')
+                                        'assets/icons/active_setting_icon.svg')
                                     : SvgPicture.asset(
-                                        'assets/icons/active_setting_icon.svg'),
+                                        'assets/icons/setting_icon.svg'),
                                 const SizedBox(height: 5),
                                 const Text(
                                   setting,

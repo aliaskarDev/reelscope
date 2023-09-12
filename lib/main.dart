@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        '/navBar': (context) => MyNavigationBar(
+        '/navBar': (context) => const MyNavigationBar(
               title: 'Flutter Floating Bottom Bar Demo',
             ),
         '/premium': (context) => const PremiumScreen(),

@@ -1,8 +1,6 @@
 import 'dart:ui';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_reelscope/constants/const.dart';
 import 'package:flutter_reelscope/features/favorites/favorites_main_screen.dart';
 import 'package:flutter_reelscope/features/my_projects/my_projects_main_screen.dart';
 import 'package:flutter_reelscope/features/settings/settings_main_screens.dart';
@@ -15,11 +13,10 @@ class MyNavigationBar extends StatefulWidget {
   final String title;
 
   @override
-  // ignore: library_private_types_in_public_api
-  _MyNavigationBarState createState() => _MyNavigationBarState();
+  MyNavigationBarState createState() => MyNavigationBarState();
 }
 
-class _MyNavigationBarState extends State<MyNavigationBar>
+class MyNavigationBarState extends State<MyNavigationBar>
     with SingleTickerProviderStateMixin {
   late int currentPage;
   late TabController tabController;
@@ -42,8 +39,6 @@ class _MyNavigationBarState extends State<MyNavigationBar>
   void changePage(int newPage) {
     setState(() {
       currentPage = newPage;
-      isActiveIcon = !isActiveIcon;
-      print('check button');
     });
   }
 
