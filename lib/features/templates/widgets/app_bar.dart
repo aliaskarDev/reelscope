@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reelscope/features/templates/widgets/change_trend_container.dart';
-import 'package:flutter_reelscope/features/templates/widgets/reels_listview.dart';
-import 'package:flutter_reelscope/features/templates/widgets/scroll_containers.dart';
 import 'package:flutter_svg/svg.dart';
 
-class TemplatesMainScreen extends StatefulWidget {
-  const TemplatesMainScreen({super.key});
+class MyAppBar extends StatelessWidget {
+  const MyAppBar({super.key});
 
-  @override
-  State<TemplatesMainScreen> createState() => _TemplatesMainScreenState();
-}
-
-class _TemplatesMainScreenState extends State<TemplatesMainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 60,
+    return AppBar(
+        toolbarHeight: 80,
         automaticallyImplyLeading: false,
         actions: [
           Padding(
@@ -27,7 +18,7 @@ class _TemplatesMainScreenState extends State<TemplatesMainScreen> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,24 +44,6 @@ class _TemplatesMainScreenState extends State<TemplatesMainScreen> {
             ),
           )
         ],
-      ),
-      body: ListView(
-        shrinkWrap: true,
-        children: const [
-          Column(
-            children: [
-              SizedBox(height: 18),
-              ScrollContainers(),
-              ReelsListView(activeIcon: true),
-              ReelsListView(activeIcon: false),
-              ReelsListView(activeIcon: true),
-              SizedBox(height: 10),
-              ChangeTrendContainer(),
-              ReelsListView(activeIcon: false)
-            ],
-          ),
-        ],
-      ),
-    );
+      );
   }
 }

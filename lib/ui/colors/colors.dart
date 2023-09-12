@@ -6,6 +6,8 @@ abstract class MyColors {
   static const Color lightGrey = Color(0xffF2F2F2);
   static const Color white = Color(0xffFFFFFF);
   static const Color orange = Color(0xffFF8051);
+  static const Color bacgraundGrey = Color(0xffF5F5F5);
+  static const Color bottomLine = Color(0xff4DCCEE);
   // static const Color pinkGradient = Color(0xff);
   // static const Color orangeGradient = Color(0xff);
   // static const Color blueGradient = Color(0xff);

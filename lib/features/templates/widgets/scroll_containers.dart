@@ -1,43 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reelscope/ui/colors/colors.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_reelscope/constants/const.dart';
+import 'package:flutter_reelscope/features/templates/widgets/stotries_container.dart';
 
-class ScrollContainer extends StatelessWidget {
-  const ScrollContainer({
-    Key? key,
-    required this.text,
-    required this.isActive,
-    required this.onTap,
-    required this.title,
-  }) : super(key: key);
-
-  final String text;
-  final bool isActive;
-  final String title;
-  final Function() onTap;
+class ScrollContainers extends StatefulWidget {
+  const ScrollContainers({super.key});
 
   @override
+  State<ScrollContainers> createState() => _ScrollContainersState();
+}
+
+class _ScrollContainersState extends State<ScrollContainers> {
+  int currentIndex = 0;
+  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: isActive ? MyColors.black : MyColors.lightGrey,
-          borderRadius: BorderRadius.circular(9),
+    return SizedBox(
+      height: 36,
+      child: ListView.separated(
+        shrinkWrap: true,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8,
         ),
-        padding: const EdgeInsets.all(8),
-        child: Row(
-          children: [
-            SvgPicture.asset(title),
-            const SizedBox(width: 5),
-            Text(
-              text,
-              style: TextStyle(
-                color: isActive ? Colors.white : Colors.black,
-              ),
-            ),
-          ],
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) => StoriesContainer(
+          title: iconTypes[index],
+          text: types[index],
+          isActive: currentIndex == index,
+          onTap: () {
+            currentIndex = index;
+            setState(() {});
+          },
         ),
+        separatorBuilder: (context, index) => const SizedBox(
+          width: 16,
+        ),
+        itemCount: types.length,
       ),
     );
   }
