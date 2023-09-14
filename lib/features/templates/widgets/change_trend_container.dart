@@ -26,6 +26,7 @@ class _ChangeTrendContainerState extends State<ChangeTrendContainer> {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
           child: Row(
             children: [
+              SvgPicture.asset('assets/icons/fire_icon.svg'),
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Column(

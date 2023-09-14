@@ -57,7 +57,7 @@ class MyNavigationBarState extends State<MyNavigationBar>
           currentPage: currentPage,
           tabController: tabController,
           unselectedColor: Colors.black,
-          barColor: MyColors.black.withOpacity(0.4),
+          barColor: MyColors.black.withOpacity(0.5),
           start: 10,
           end: 2,
           child: TabBarView(

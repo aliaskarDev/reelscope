@@ -17,6 +17,7 @@ class _TemplatesMainScreenState extends State<TemplatesMainScreen> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 60,
+        elevation: 0,
         automaticallyImplyLeading: false,
         actions: [
           Padding(

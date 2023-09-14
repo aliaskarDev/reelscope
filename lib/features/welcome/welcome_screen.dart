@@ -40,10 +40,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   duration: 450,
                 )),
                 Expanded(
-                    child: MovingList(
-                  direction: AxisDirection.up,
-                  duration: 200,
-                )),
+                  child: MovingList(
+                    direction: AxisDirection.up,
+                    duration: 200,
+                  ),
+                ),
               ],
             ),
           ),

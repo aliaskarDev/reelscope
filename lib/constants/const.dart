@@ -19,8 +19,20 @@ const String template = 'Шаблоны';
 const String favorite = 'Изранное';
 const String myProject = 'Проекты';
 const String setting = 'Настройки';
+const String dontHaveFavorite = 'У вас пока нет избранного';
+const String addFavorite = 'Добавьте сюда понравившиеся шаблоны';
+const String chooseTemplate = 'Выбрать шаблон!';
+const String error = 'Возникла ошибка';
+const String errorText = 'Текст ошибки';
+const String tryagain = 'Попробовать еще';
+const String pusgNotif = 'Разрешить Push-уведомления';
+const String administration = 'Служба поддержки';
+const String share = 'Поделиться';
+const String imBloger = 'Я блогер';
+const String callUs = 'Связаться с нами';
+const String followUs = 'Подпишитесь на нас';
 
-final List<String> types = [
+const List<String> types = [
   'Рилс',
   'Пост',
   'Сторис',
@@ -29,7 +41,7 @@ final List<String> types = [
   'YouTube video',
 ];
 
-final List<String> iconTypes = [
+const List<String> iconTypes = [
   'assets/icons/insta_icon.svg',
   'assets/icons/insta_icon.svg',
   'assets/icons/insta_icon.svg',
@@ -37,6 +49,7 @@ final List<String> iconTypes = [
   'assets/icons/tiktok_icon.svg',
   'assets/icons/youtube_icon.svg',
 ];
+
 final List<Widget> firstphotos = [
   Image.asset('assets/images/photo1.png', scale: 4),
   Image.asset('assets/images/photo3.png', scale: 4),
@@ -50,11 +63,19 @@ final List<Widget> firstphotos = [
   Image.asset('assets/images/photo4.png', scale: 4),
 ];
 
-final List<String> reelsPhotos = [
+const List<String> reelsPhotos = [
   'assets/images/reels1.png',
   'assets/images/reels2.png',
   'assets/images/reels3.png',
   'assets/images/reels4.png',
   'assets/images/reels5.png',
   'assets/images/reels6.png',
+];
+
+const List<String> settingPhotos = [
+  'assets/images/setting_photo1.png',
+  'assets/images/setting_photo2.png',
+  'assets/images/setting_photo3.png',
+  'assets/images/setting_photo4.png',
+  'assets/images/setting_photo5.png',
 ];
